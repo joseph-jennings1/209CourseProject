@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>My First jQuery Mobile Application</title>
+  <title>Prog209 Course Project</title>
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
   <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
   <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
