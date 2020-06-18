@@ -1,0 +1,205 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Prog209 Course Project</title>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+  <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="javascripts/main.js"></script>
+ </head>
+
+ <body>
+      <!--*********************************************************-->
+      <!--*********************************************************-->
+<div data-role="page" id="Home">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Joe's Finance Tracker App</h1>
+      <div data-role="navbar">
+         <ul>
+            <li><a href="#Home" data-icon="star">Home</a> </li>
+            <li><a href="#Savings" data-icon="plus">Savings and Investments</a> </li>
+            <li><a href="#Spending" data-icon="minus">Spending Tracking</a> </li>
+            <li><a href="#Overview" data-icon="star">Financial Overview</a> </li>
+         </ul>
+      </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='c'>
+      <h2>My Finance App</h2>
+      <br>
+      <br>
+      <p>This app allows you to record income, expenses, their sources and the month in which they occurred.</p>
+      <p>This app also shows you an overview page with your net income/expense.</p>
+      
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Joe Jennings 2020</h1>
+   </div>
+
+</div>
+<!--*********************************************************-->
+<!--*********************************************************-->
+<div data-role="page" id="Spending">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Joe's Finance Tracker App</h1>
+      <div data-role="navbar">
+            <ul>
+                <li><a href="#Home" data-icon="star">Home</a> </li>
+				<li><a href="#Savings" data-icon="plus">Savings and Investments</a> </li>
+				<li><a href="#Spending" data-icon="minus">Spending Tracking</a> </li>
+				<li><a href="#Overview" data-icon="star">Financial Overview</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content">
+     <h2>Spending Tracking</h2>
+
+	 <div>
+		<label for="expenseName">Name of Expense:</label>
+		<input type = "text" value="" id = "expenseName"><br>
+		<label for="expenseAmount">Amount of Expense:</label>
+		<input type = "text" value="" id = "expenseAmount"><br>
+        <form>
+            <div class="ui-field-contain">
+                <label for="select-month">Month of Expense</label>
+                <select name="select-month" id="select-month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+            </div>
+        </form>
+        <br>
+		<input type="button" value="Click to add entry" id = "submitSpending" value = "Submit Expense">
+		<br>
+        <input type="button" value="Clear" id="clearExpense" value="Clear">
+        <br>
+    <h3>List of Expenses</h3>
+    <ul id = "expenseList"></ul>
+    
+    <br>
+
+     </div>
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Joe Jennings 2020</h1>
+   </div>
+
+</div>
+<!--*********************************************************-->
+<!--*********************************************************-->
+<div data-role="page" id="Savings">
+
+	<div data-role="header" data-theme='b'> 
+	<h1>Joe's Finance Tracker App</h1>
+	   <div data-role="navbar">
+			 <ul>
+				<li><a href="#Home" data-icon="star">Home</a> </li>
+				<li><a href="#Savings" data-icon="plus">Savings and Investments</a> </li>
+				<li><a href="#Spending" data-icon="minus">Spending Tracking</a> </li>
+				<li><a href="#Overview" data-icon="star">Financial Overview</a> </li>
+			 </ul>
+		  </div><!-- /navbar -->
+	</div>
+
+	<div data-role="content" data-theme='d'>
+	    <h2>Savings Tracking</h2>
+	    <div>
+		   <label for="incomeSource">Source of Income:</label>
+		   <input type = "text" value="" id = "incomeSource"><br>
+		   <label for="incomeAmount">Amount of Income:</label>
+		   <input type = "text" value="" id = "incomeAmount"><br>
+		   <!--<label for="incomeDate">Date of Income:</label>
+		   <input type = "text" value="" id = "expenseDate"><br>
+            <br>-->
+           <form>
+                <div class="ui-field-contain">
+                    <label for="select-month">Month of Income</label>
+                    <select name="select-month" id="select-month">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+            </form>
+            <br>
+		   <input type="button" value="Click to add entry" id = "submitIncome" value = "Submit Income">
+		   <br>
+		   <input type="button" value="Clear" id="clearIncome" value="Clear">
+
+           <h3>List of Income</h3>
+           <ul id = "incomeList"></ul>
+           <br>
+		</div>
+	</div>
+
+	<div data-role="footer"  data-theme='b'>
+		<h1>Copywrite Joe Jennings 2020</h1>
+	</div>
+    
+</div>
+<!--*********************************************************-->
+<!--*********************************************************-->
+<div data-role="page" id="Overview">
+
+	<div data-role="header" data-theme='b'> 
+	<h1>Joe's Finance Tracker App</h1>
+	   <div data-role="navbar">
+			 <ul>
+				<li><a href="#Home" data-icon="star">Home</a> </li>
+				<li><a href="#Savings" data-icon="plus">Savings and Investments</a> </li>
+				<li><a href="#Spending" data-icon="minus">Spending Tracking</a> </li>
+                <li><a href="#Overview" data-icon="star">Financial Overview</a> </li>
+                <p id = "IDparmHere" hidden></p>
+			 </ul>
+		  </div><!-- /navbar -->
+	</div>
+
+	<div data-role="content" data-theme='d'>
+       <h2>Financial Overview</h2>
+       Total Expenses:<br>
+       <p id = "expenseTotal"></p>
+       <br>
+       Total Income: <br>
+       <p id = "incomeTotal"></p>
+       <br>
+       Grand Total:
+       <p id = "grandTotal"></p>
+
+	</div>
+
+	<div data-role="footer"  data-theme='b'>
+		<h1>Copywrite Joe Jennings 2020</h1>
+	</div>
+    
+</div>
+
+
+ </body>
+ </html>
